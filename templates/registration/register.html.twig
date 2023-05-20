@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <section class="section inscriptionParent">
+    <h1 class='text-center'>Creér un compte chez-<a href="{{path('app_product')}}">Larycom</a> pour bénéficiez les services</h1>
+        <div class="registerParent">
+            <div class="inscription">
+                {# <h1 class='text-center'>Créez votre compte Larycom gratuit</h1> #}
+                <h1>S'inscrire</h1>
+
+                {{ form_start(registrationForm) }}
+                    {{ form_row(registrationForm.firstname) }}
+                    {{ form_row(registrationForm.lastname) }}
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.telephone) }}
+                    {{ form_row(registrationForm.plainPassword, {}) }}
+                    {{ form_row(registrationForm.gender) }}
+
+                    {{ form_row(registrationForm.terms) }}
+
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                {{ form_end(registrationForm) }}
+                <br>
+                
+               
+                <p>Vous avez un Compte !! <a href="{{path('app_login')}}">Se connecter</a></p>
+
+            </div>
+
+            <div class="compteAvantage">
+                <h2>Repensez les achats de notre produits</h2>
+                <div class="divMoney">
+                    <h3><i class="fa-solid fa-money-bill-1-wave"></i> Gestion des factures facilitée</h3>
+                    <p>Filtrez vos recherches et ne voyez que les produits disposant d’une facture immédiatement téléchargeable afin de faciliter votre comptabilité.</p>
+                </div>
+
+                <div class="divPrime">
+                    <h3><i class="fa-solid fa-award"></i> Achats Prime</h3>
+                    <p>Bénéficiez de la livraison illimitée et GRATUITE sur les commandes éligibles pour tous les utilisateurs du compte professionnel, ainsi que d'autres avantages.</p>
+                </div>
+                <div class="divProfiter">
+                    <h3><i class="fa-solid fa-tag"></i> Remises sur quantités</h3>
+                    <p>Profitez de remises exceptionnelles, dès deux unités achetées, sur plus de 30 de produits provenant des meilleures marques.</p>
+                </div>
+                <div class="divImg">
+                    <img src="https://m.media-amazon.com/images/I/416LUsi8c6L.svg" alt="L'image du arière-plan">
+                </div>
+                <div class="divParagraph">
+                    <p><a href="{{path('app_services')}}">En savoir plus sur Larycom services</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

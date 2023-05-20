@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<section class="section">
+    <h3 class='text-center'>Bagages de <a href="{{path('app_product')}}">larycom</a></h3>
+    <p class='text-center'>Bienvenue dans la boutique Bagages de <a href="{{path('app_product')}}">larycom</a> découvrez notre sélection de Sacs à dos , Sacs à main et bien plus</p>
+    <h1 class='text-center'>Catégories à l'honneur</h1>
+</section>
+
+<div class="articleParent">
+    {% for bagage in bagages %}
+        <div class="productElement">
+            <img src="{{asset('img/upload/' ~ bagage.picture)}}" alt="{{bagage.name}}">
+            <h3>{{bagage.name}}</h3> 
+            <p><b>Category</b> : {{bagage.category}}</p> 
+            <p class="priceColor2"><b>Prix</b> :{{bagage.price}} <b>€</b></p> 
+            <p><a href="{{path('app_commander')}}">Livraison GRATUITE dès 999.90 € d'achats expédiés par Larycom</a></p>
+            <p><a href="{{path('single_bagages', {id: bagage.id})}}" class="btn btn-primary">voir Plus</a></p>
+            {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{path('update_bagages', {id: bagage.id})}}">Modifier</a>
+            <a href="{{path('delete_bagages', {id: bagage.id})}}">Suprimmer</a>
+            {% endif %}
+
+        </div>
+
+    {% endfor %}
+</div>
+{% endblock %}

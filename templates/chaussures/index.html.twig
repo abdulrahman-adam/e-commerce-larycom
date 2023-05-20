@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <section class="section">
+        <h3 class='text-center'>Bienvenue dans la boutique Chaussures de larycom</h3>
+         <div class="productParent">
+            {% for chaussure in chaussures %}
+                <div class='productElement'>
+                    <img src="{{asset('img/upload/' ~ chaussure.picture)}}" alt="{{chaussure.name}}">
+                    <h3>{{chaussure.name}}</h3>
+                    <p><b>Catégorie: </b>{{chaussure.category}}</p>
+                    
+                    <p class='priceColor'><b>Prix: </b>{{chaussure.price}} <b>€</b></p>
+					<p><a href="{{path('app_commander')}}">Livraison GRATUITE dès 10.90 € d'achats expédiés par Larycom</a></p>
+                    <p><a href="{{path('single_chaussures' , {id: chaussure.id})}}" class="btn btn-primary">Voir plus</a></p>
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{path('update_chaussures' , {id: chaussure.id})}}">Modifier</a>
+                    <a href="{{path('delete_chaussures' , {id: chaussure.id})}}">Suprimmer</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

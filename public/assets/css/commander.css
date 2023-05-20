@@ -1,0 +1,50 @@
+
+
+/* La fueille de style du paragraphe du template Commander */
+
+.parentCommander {
+    display: flex;
+    justify-content: space-around;
+    margin: 33px auto;
+}
+
+
+/* La fuieille de style du formComandez */
+
+.formCommander {
+    width: 480px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    padding: 44px;
+}
+
+
+.formCommander .form-label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.formCommander .col-form-label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#commander_form_description {
+    height: 166px;
+}
+
+/* La fueille de style de la déviation du paragraphe */
+
+.livraison {
+    width: 666px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    padding: 44px;
+}
+
+.livraison p{
+    font-size: 20px;
+}
+
+.secondSpan {
+    display: none;
+}
+

@@ -1,0 +1,242 @@
+
+
+
+
+.contactPage {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 66px;
+    margin: 55px auto;
+    background-color: rgb(237, 230, 230);
+}
+
+
+
+
+.aproposParent {
+    width: 777px;
+    margin: 33px;
+}
+
+
+.aproposParent p{
+    font-size: 26px;
+}
+
+.aproposParent p span{
+    background-color: rgb(116, 176, 245);
+    padding: 6px;
+    border-radius: 9px;
+}  
+
+@media only screen and (max-width: 696px) and (min-width: 200px) {
+   
+
+    .aproposParent{
+        width: auto;
+    }
+
+   
+}
+
+/* La section du Contact Reseau */
+.contactReseau {
+    width: 180px;
+}
+
+.bi-envelope {
+    color: #0d6efd;
+    font-size: 33px;
+}
+
+.bi-telephone {
+    color: #0d6efd;
+    font-size: 33px;
+}
+
+.bi-geo-alt {
+    color: #0d6efd;
+    font-size: 33px;
+}
+
+.span1 {
+    background-color: #fff ! important;
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.span1:hover{
+    background-color: #fff ! important;
+    color: #0d6efd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.emailElement {
+    height: 51px;
+    cursor: pointer;
+}
+
+.telephoneElement {
+    height: 51px;
+    margin-bottom: 0;
+    cursor: pointer;
+
+}
+
+.locationElement {
+    height: 51px; 
+    cursor: pointer;
+}
+
+
+/* La section de disparu */
+
+
+/* La des element de disparu */
+
+.disparu1 {
+    width: 666px;
+    padding: 19px;
+    border-radius: 9px;
+    background-color: rgb(96, 171, 233);
+    color: white;
+    text-align: center;
+    margin-bottom: 11px;
+    display: none;
+}
+
+.disparu2 {
+    width: 666px;
+    padding: 19px;
+    border-radius: 9px;
+    background-color: rgb(96, 171, 233);
+    color: white;
+    text-align: center;
+    margin-bottom: 11px;
+    display: none;
+}
+
+.disparu3 {
+    width: 666px;
+    padding: 19px;
+    border-radius: 9px;
+    background-color: rgb(96, 171, 233);
+    color: white;
+    text-align: center;
+    margin-bottom: 11px;
+    display: none;
+}
+
+@media only screen and (max-width: 702px) and (min-width: 200px) {
+    .disparu1, .disparu2,.disparu3 {
+        width: auto;
+    }
+    .disparu3{
+    padding: 0;
+
+    }
+    .disparu3 iframe {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* La déviation du contact */
+
+.contactParent{
+    width: 666px;
+    margin: 33px;
+}
+
+.contactParent p{
+    font-size: 22px;
+} 
+
+
+
+/* La déviation du formContact */
+
+.contactForm{
+    width: 600px;
+    margin: 1px auto;
+}
+
+
+/* La section des elements du form */
+
+.form-floating{
+    margin-top: 11px;
+}
+
+
+#contact_form_comment{
+    width: 444px;
+    display: flex;
+    justify-content: space-around;
+    gap: 66px;
+}
+
+#contact_form_submit {
+    margin-top: 11px;
+}
+
+#contact_form_content{
+    height: 222px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1550px) and (min-width: 200px) {
+    .contactPage {
+        flex-direction: column;
+    }
+
+    .aproposParent{
+        width: auto;
+    }
+
+    .contactParent{
+        width: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 705px) and (min-width: 200px) {
+  
+
+    .contactParent{
+        width: auto;
+    }
+
+    .contactParent p{
+        width: auto;
+    }
+
+    .contactForm {
+        width: auto;
+    }
+
+    #contact_form div{
+        width: auto;
+        
+    }
+
+    @media only screen and (max-width: 447px) and (min-width: 200px) {
+        #contact_form div{
+            width: auto;
+        }
+
+        #contact_form_comment{
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}
+

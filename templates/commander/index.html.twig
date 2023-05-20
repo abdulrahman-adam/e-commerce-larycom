@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <section class="section">
+        <h2 class='text-center'>Nous sommes toujours à votre service</h2>
+        <div class="parentCommander">
+            <div class="formCommander">
+            <h3>Grâce au ce formulaire vous recommandez facillement</h3>
+            <br>
+                {{form(formCommander)}}
+            </div>
+            <div class="livraison">
+            
+                <h2>LIVRAISON RAPIDE ET GRATUITE</h2>
+                <p>La livraison rapide est désormais appelée livraison standard.
+
+                Les membres larycom Prime bénéficient d'une livraison prioritaire gratuite pour les articles que nous vendons ou expédions. Pour plus d'informations, consultez larycom Prime.
+
+                Les frais de livraison standard varient en fonction de l'adresse et du contenu de la commande.
+
+                Pour la France et Monaco, les frais de livraison sont les suivants :
+
+                0,01 € par envoi sans minimum d’achat pour les commandes contenant uniquement des livres.
+                0,01 € par envoi pour une commande d’un montant supérieur à 999.90€ pour les commandes contenant au moins un livre.
+                GRATUITE pour les commandes d’un montant supérieur à 999.90€, si les articles sont vendus et expédiés par larycom.fr, ou commercialisés par des vendeurs tiers et expédiés par larycom.fr.
+                
+
+                GRATUITE sans minimum d’achat pour les commandes contenant uniquement des livres.
+                GRATUITE pour les commandes d’un montant supérieur à 999.90€*.
+                Pour la Suisse, les frais de livraison sont les suivants :
+                <span class='firstSpan'></span>
+                <span class='secondSpan'>
+                GRATUITE pour les commandes d’un montant supérieur à 999.90€ contenant des livres, des CD, des DVD, des Blu-ray, des logiciels ou des jeux vidéo.
+                GRATUITE pour les commandes d’un montant supérieur à 39 €*.
+                Consultez Tarifs et délais de livraison pour connaître les autres frais liés à la commande.
+
+                *Les critères supplémentaires suivants s'appliquent à la livraison gratuite :
+
+                Vos articles sont vendus et expédiés par larycom, ou commercialisés par des vendeurs tiers et expédiés par larycom.
+                Les articles volumineux, tels que les téléviseurs, font l’objet de frais d'expédition, que nous précisons sur la page détaillée du produit.
+                Vous sélectionnez la livraison standard, la livraison standard en point relais ou la livraison standard en casier larycom Locker.
+                Remarque : Les prix affichés sur le site larycom incluent la TVA française. Le prix final TTC (y compris le taux de TVA applicable dans le pays de livraison pour la Belgique et le Luxembourg et hors TVA pour la Suisse) de la commande est indiqué sur la page de vérification et de validation de la commande.
+                Les articles vendus par larycom Media EU SARL (tels que les téléchargements MP3) sont exclus de cette offre.
+
+                Livraison standard gratuite et modifications de commande
+                Si vous souhaitez que votre commande soit livrée à plusieurs adresses de livraison, chacune d'elles est traitée comme une commande distincte, et chacune doit remplir les critères de livraison gratuite pour être éligible à la livraison gratuite.
+
+                Si vous modifiez l'adresse de livraison de votre commande, la livraison standard reste gratuite.
+
+                La livraison reste gratuite si vous annulez des articles de votre commande, à condition que le montant de la commande reste supérieur ou égal à 25€ et que la commande ne contienne pas de livres.
+
+                Livraison standard gratuite et Acheter maintenant
+                Lorsque vous commandez plusieurs articles au cours d'une session Acheter maintenant (30 minutes), nous les regroupons en différentes commandes, en fonction de leur disponibilité en stock et un délai de livraison estimé est indiqué pour chaque commande. Chacune de ces commandes est admissible à la livraison gratuite si elle remplit les conditions énumérées ci-dessus (à l'exception de la demande de livraison en point relais).
+
+                Si vous commandez avec Acheter maintenant, vous ne pouvez pas sélectionner la Livraison en point relais.</span></p>
+                <button class='btn btn-primary' onclick='lire()' id='lire'>Affiche plus</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

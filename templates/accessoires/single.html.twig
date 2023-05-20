@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<section class="section">
+		<div class="articleParent">
+			<div class="articleElement">
+                <img src="{{ asset('img/upload/' ~ accessoires.picture)}}" alt="{{accessoires.name}}">
+				<h3>{{accessoires.name}}</h3>
+				<p><b>Catégorie</b>: {{accessoires.category}}</p>
+				<p class="priceColor2">
+					<b>Prix</b>:
+					{{accessoires.price}}
+					<b>€</b>
+				</p>
+					<p><a href="{{path('app_commander')}}">Livraison GRATUITE dès 10.90 € d'achats expédiés par Larycom</a></p>
+                <p><a href="{{path('app_accessoires')}}" class="btn btn-primary">Retourner</a></p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

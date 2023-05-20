@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <h1 class='text-center'>Bonjour. Comment pouvons-nous vous aider ?</h1>
+    <h3 class='text-center'>Certaines choses que vous pouvez faire ici</h3>
+
+
+    <div class="commandeServices">
+        <a href="{{path('app_commander')}}">
+            <img src="{{asset('img/upload/commande.png')}}" alt="">
+            <div class="div1">
+                <h3>Vos commandes</h3>
+                <p>Suivre les colis
+                    Modifier ou annuler les commandes
+                    Retours et remboursements	
+                </p>
+            </div>
+        </a>
+
+        <a href="{{path('app_login')}}">
+            <img src="{{asset('img/upload/compte.png')}}" alt="">
+            <div class="div2">
+                <h3>Votre compte</h3>
+                <p>Gérez les préférences de votre compte</p>
+            </div>
+        </a>
+
+        <a href="{{path('app_contact')}}">
+            <img src="{{asset('img/upload/contact.png')}}" alt="">
+            <div class="div3">
+                <h3>Contacter-Nous</h3>
+                <p>Contacter notre service client par téléphone ou par chat</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="annoncerParent">
+        <div class="div11">
+            <h1 class='text-center' id='child'>Espace Publicitaire</h1>
+            <p class='child1 showParagragh text-center' id='child2'>Offrez votre produit aux prix les plus bas et les meilleurs services</p>
+            <p class='child1 text-center' id='child1'>Nous ne sommes pas les seuls mais nous sommes les meilleurs</p>
+            <p class='child1 text-center' id='child3'>Notre meilleur service est synonyme de qualité</p>
+
+            {# <br>
+            <br>
+            <br>
+            <br>
+            <br> #}
+            
+            
+            <h6 id='child4' class='text-center' >Nous pouvons placer votre annonce ici et vous pouvez nous contacter via  
+                <button class="btn btn-primary" id='annoncer'>Annoncer</button>
+            </h6>
+
+           
+             <div id="formServices">
+                {{form(formServices)}}
+                <button class="btn btn-primary" id='annuler' class='btnAnnuler'>Annuler</button>
+
+             </div>
+
+              <div id='butPublicity'>
+                <h3 class='text-center'>Quel est le but de la publicité ?</h3>
+                <p class='text-center'>
+                    Objectifs de la publicité
+                    Toute opération ou campagne publicitaire a pour but d'attirer l'attention du client sur le produit ou la marque ainsi que de le familiariser avec lui afin d'optimiser et de faciliter l'acte d'achat
+                </p>
+            </div>
+
+        </div>
+
+        <div class="div22">
+            <h1 class='text-center'>Drone</h1>
+            <img src="img/upload/drone.jpg"  width='200px' height='150px' alt="L'image de drone">
+            <p class='text-center'>"La meilleure technologie du 21ème siècle"</p>
+            <p class='text-center'><span id='div22'></span><span id='more22'>Les critères et fictions virilistes se périment à mesure que la technologie se substitue à l'humain. Force et puissance physiques : les muscles de ces messieurs, l'automation s'en branle, drones et exosquelettes partout se greffent et se déploient.</span></p>
+            <button class="btn btn-primary" id='button22' onclick="div22()">En savoir plus</button>
+        </div>
+
+        <div class="div33">
+            <h1 class='text-center'>Ordinateur</h1>
+            <img src="img/upload/ordinateur.webp" width='200px' height='150px' alt="l'image d'ordinateur">
+            <p class='text-center'>"Avec lui, la vie est devenue numirique"</p>
+            
+            <p class='text-center'><span id='div33'></span><span id='more33'>Avait comparé la mémoire au disque dur d’un ordinateur. Il s’agissait non pas de supprimer les données mais de les modifier. De transformer les souvenirs. De court-circuiter la réalité, faire naître de nouvelles images.</span></p>
+
+            <button class="btn btn-primary" id='button33' onclick="div33()">En savoir plus</button>
+        </div>
+
+    </div>
+    
+       
+    <section>
+
+
+        <div class="servicParagrahpe">
+        
+            <div id="container">
+                <h2  class='text-center'>Quelle distinction faire entre le numérique et le digital et l'nformatique ? </h2>
+
+                <div class="allQ">
+
+                    <div class="q3">
+                        <div class="title-accordion">
+                            <h2>Quelle est le numérique ?</h2>
+                            <div class='plus'>+</div>
+                        </div>
+                        <p class='content'>
+                        Le numérique recouvre à la fois les sciences et technologies de l’information et de la communication (informatique, électronique, télécommunications). Le périmètre du numérique est donc plus large que celui de l’informatique. Le numérique modifie les activités humaines et sociales. Ainsi on parle de santé numérique, de commerce ou de média numériques pour qualifier des secteurs d’activité, modèles économiques ou outils du quotidien dans lesquels le numérique a été intégré et qu’il contribue à transformer.
+                        </p>
+                    </div>
+
+
+                    <div class="q1">
+                        <div class="title-accordion">
+                            <h2>Qulle est le digital ?</h2>
+                            <div class='plus'>+</div>
+                        </div>
+                        <p class='content'>
+                    
+
+                        Le digital se rapporte à la communication à travers les supports immatériels, aux technologies numériques, aux différents réseaux. Il permet un accompagnement du consommateur dans la vie de tous les jours avec tous les outils nécessaires tels qu’un conseiller virtuel par exemple.
+                        </p>
+                    </div>
+
+                    <div class="q2">
+                        <div class="title-accordion">
+                            <h2>Quelle est l'informatique ?</h2>
+                            <div class='plus'>+</div>
+                        </div>
+                        <p class='content'>
+                        L'informatique est un domaine d'activité scientifique, technique, et industriel concernant le traitement automatique de l'information numérique par l'exécution de programmes informatiques hébergés par des dispositifs électriques-électroniques : des systèmes embarqués, des ordinateurs, des robots, des automates, etc
+                        Certains domaines de l'informatique peuvent être très abstraits, comme la complexité algorithmique, et d'autres peuvent être plus proches d'un public profane. Ainsi, la théorie des langages demeure un domaine davantage accessible aux professionnels formés (description des ordinateurs et méthodes de programmation), tandis que les métiers liés aux interfaces homme-machine sont accessibles à un plus large public. 
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="lireplus">
+            
+                <h1 class='text-center'>Le digital ou mode de croissance du 21ème siècle ! </h1>
+                
+                    <p>Les avantages du marketing digital pour le développement de votre entreprise ne sont plus à prouver : les coûts de communication sont diminués, votre audience est accrue, vous touchez un public plus large, votre communication est plus simple et rapide, etc. Pour sortir du lot et vous démarquer de la concurrence, votre entreprise doit être présente sur les réseaux sociaux. En mettant la stratégie digitale au coeur de ses préoccupations, votre entreprise a des chances de voir sa croissance s'accélérer<span id="childOne1">...</span>
+
+
+
+                    <span id="more1"> Le marketing digital va vous permettre de gagner de nouveaux clients et d'être visible sur différents supports numériques. Pour en apprendre davantage, lisez ce qui suit !
+
+                    Comment adopter une bonne stratégie digitale pour votre entreprise ?
+
+                    Pour construire du contenu digital de bonne qualité, votre entreprise doit s'intéresser au mode de vie et aux attentes des consommateurs. Ces derniers sont massivement connectés sur les réseaux sociaux et vous devez aller les chercher là où ils se trouvent.</span>
+
+                    </p>
+                    <button id='read1' class='btn btn-primary' onclick="read()">Affiche plus</button>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

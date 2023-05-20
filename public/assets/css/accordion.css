@@ -1,0 +1,89 @@
+.q1, .q2, .q3{
+    margin: 40px auto 40px auto;
+    width: 560px;
+    margin: 0 auto;
+}
+
+@media ( max-width: 900px) {
+    .q1, .q2, .q3{
+       width: auto;
+    }
+}
+
+
+.plus{
+    font-size: 40px;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.plus:hover{
+  
+    cursor: pointer;
+}
+.title-accordion{
+    width: 555px;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(65, 105, 225, 0.9);
+    color: white;
+    border-radius: 5px;
+    margin: 1px auto;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.title-accordion h2{
+   margin-left: 20px;
+   font-weight: bold;
+}
+
+.content{
+    width: 555px;
+    padding: 17px 17px 33px 17px;
+    background-color: rgb(221, 239, 255);
+    font-size: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 2px solid rgb(174, 217, 255);
+    transition: all 0.9s;
+    opacity: 0;
+    height: 0;
+}
+
+/* La class active pour accordion */
+
+.active {
+    opacity: 1;
+}
+
+
+@media ( max-width: 900px) {
+
+    .title-accordion{
+        width: auto;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(65, 105, 225, 0.9);
+        color: white;
+        font-size: 12px;
+        
+    }
+
+    .content{
+        width: auto;
+        text-align: center;
+        /* font-size: 9px; */
+    }
+
+    .title-accordion h2{
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        width: auto;
+    }
+}

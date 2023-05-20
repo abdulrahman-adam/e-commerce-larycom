@@ -1,0 +1,95 @@
+
+.registerParent{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    margin: 33px auto;
+}
+
+
+
+@media only screen and (max-width: 1360px) and (min-width:200px) {
+    .registerParent {
+        flex-direction: column;
+    }
+}
+
+
+/* La feuille de style  de la déviation de l'avatage du création du compte  */
+
+.compteAvantage {
+    width: 600px;
+    margin-top: 33px;
+    margin-bottom: 160px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 11px;
+    padding: 55px;
+    background-color: #001f3c;
+    color: #fff;
+}
+
+
+.compteAvantage div {
+    margin-top: 44px;
+}
+
+.divImg {
+    text-align: center;
+    margin-bottom: 0;
+    border: 2px solid red;
+}
+
+.divImg img{
+   height: 172px;
+   text-align: center;
+}
+
+
+.divParagraph {
+    background-color: #0d2c49;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid red;
+    margin-top: 0 ! important;
+}
+
+.divParagraph p a{
+    color: #fff;
+}
+
+
+
+
+@media only screen and (max-width: 1360px) and (min-width:200px) {
+    .compteAvantage {
+        padding: 5px 55px;
+        margin: 44px;
+        width: auto;
+    }
+
+    .divImg img{
+        width:auto;
+        height: auto;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 426px) and (min-width:200px) {
+
+        .compteAvantage {
+            padding: 5px 55px;
+            margin: 22px;
+            width: auto;
+        }
+
+
+        .divImg {
+            opacity: 0;
+        }
+
+
+        .divImg img{
+            opacity: 0;
+        }
+    }
+}
+

@@ -1,0 +1,21 @@
+
+
+/* la feuille style de la tableau du panier */
+
+thead tr {
+    background-color: rgb(223, 215, 215); 
+}
+
+tbody tr {
+    transform: translateY(22px);
+}
+
+tbody tr .text-center{
+    transform: translateY(-22px);
+}
+
+tbody tr img{
+    transform: translateY(-22px);
+    border: 1px solid black;
+    border-radius: 3px;
+}

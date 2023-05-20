@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Valider ma commande - Larycom!{% endblock %}
+
+{% block body %}
+    <h2>Je passe ma commande</h2>
+    <p>Choisissez vos préférence avant de passer votre commande sur la larycom.</p>
+    <hr>
+    <div class="row">
+
+        <div class="col-md-6">
+            <p><b>Choisir nom adresse de livraison</b></p>
+            {% set formHtml %}
+                {{form(form)}}
+            {% endset %}
+
+            {{ formHtml|replace({'[br]' : '<br/>'})|raw }}  
+
+            <p><b>Choisir nom transporteur</b></p>
+        </div>
+
+
+        <div class="col-md-6">
+            <b>Récap de ma commande</b><br>
+            {% for product in cart %}
+                    <div class="raw">
+                    <div class="col">
+                         {# <img src="/img/upload/{{ product.produit.picture}}" alt="{{ product.produit.name}}" width='100px' height='77px'> #}
+                    </div>
+
+                    <div class="col">
+                        {# x {{ product.quantite }} #}
+                    </div>
+                    
+                </div>
+            {% endfor %}
+            
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,184 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<section class="section">
+	<h1 class='text-center'>Bienvenue chez <a href="{{path('app_product')}}">larycom</a> votre E-commerce</h1>
+	
+
+		<div class="backgroundParent">
+			<img src="{{asset('img/upload/informatique4.jpg')}}" alt="Informatique" class='imgbackground active'>
+			<img src="{{asset('img/upload/informatique6.jpg')}}" alt="Informatique" class='imgbackground'>
+			<img src="{{asset('img/upload/informatique1.jpg')}}" alt="Informatique" class='imgbackground'>
+			<img src="{{asset('img/upload/informatique2.jpg')}}" alt="Informatique" class='imgbackground'>
+		</div>
+
+
+		<div class="formFiltre">
+			<h3 class='text-center'>Chercher votre appareil chez
+				<a href="{{path('app_product')}}">larycom</a>
+			</h3>
+			<div class="container">
+				{{form_start(form)}}
+				<div class="form-row">
+					<div class="col">
+						{{form_row(form.searchword)}}
+					</div>
+
+					<div class="col">
+						{{form_row(form.minprice)}}
+					</div>
+
+					<div class="col">
+						{{form_row(form.maxprice)}}
+					</div>
+
+					<div class="col">
+						<button class='btn btn-primary'>Rechercher</button>
+					</div>
+				</div>
+				{{form_end(form)}}
+			</div>
+		</div>
+
+
+		<div class="productParent">
+		
+		
+			{% if filteredPosts %}
+
+				{% for article in filteredPosts %}
+					<div class="articleElement">
+						<img src="{{ asset('img/upload/' ~ article.picture) }}" alt="{{article.name}}">
+						<h3>{{article.name}}</h3>
+						<p>{{article.content}}</p>
+						<a href="{{path('app_commander')}}">Livraison GRATUITE dès 999.90 € d'achats expédiés par Larycom</a>
+
+						<p class="priceColor2">
+							<b>Prix</b>:
+							{{article.price}}
+							<b>€</b>
+						</p>
+						<a href="{{path('single_article', {id: article.id} )}}">Voir Plus</a>
+
+					</div>
+					
+				{% endfor %}
+
+				
+		
+
+			{% else %}
+					
+				{% for product in products %}
+			
+					<div class="productElement">
+						<img src="{{ asset('img/upload/' ~ product.picture) }}" alt="">
+						<h3>{{product.name}}</h3>
+						<p>
+							<b>Catégorei</b>:
+							{{product.type}}</p>
+						<p>
+							<b>Original</b>:
+							{{product.original}}</p>
+						<p class='priceColor'>
+							<b>Prix</b>:
+							{{product.price}}
+							<b>€</b>
+						</p>
+						<a href="{{path('app_commander')}}">Livraison GRATUITE dès 999.90 € d'achats expédiés par Larycom</a>
+						<a href="{{path('add_cart', {id:product.id})}}">
+							<button class='btn btn-primary' id='panierClick'>Ajouter au Panier
+								<i class="bi bi-cart4"></i>
+							</button>
+						</a>
+						<br>
+						{% if is_granted('ROLE_ADMIN') %}
+							<a href="{{path('update_product', {id:product.id})}}">Modifier</a>
+							<a href="{{path('delete_product', {id:product.id})}}">Suprimmer</a>
+						{% endif %}
+						<br>
+					</div>
+				{% endfor %}
+
+			{% endif %}
+
+		</div>
+
+		<div id="parentQuote">
+			<div class="slider11">
+				<h3 class='text-center'>Voici Votre Galerie des produits chez
+					<span>
+						<a href="{{path('app_product')}}">larycom
+						</a>acctuellements</span>
+				</h3>
+				<div class="slider-container" id='sliderContainer'>{# <img class='img-slider' src="img/produits/camera.jpg" width='500px'alt="L'image de notre produits" style='z-index:44;'>
+					                        <img class='img-slider'src="img/produits/drone.jpg" width='500px'alt="L'image de notre produits">
+					                        <img class='img-slider'src="img/produits/liseuse.png" width='500px'alt="L'image de notre produits">
+					                        <img class='img-slider'src="img/produits/ordinateur.webp" width='500px'alt="L'image de notre produits">
+					                        <img class='img-slider'src="img/produits/web camb.jpg" width='500px'alt="L'image de notre produits">
+					                        <img class='img-slider'src="img/produits/Le gps.jpg" width='500px'alt="L'image de notre produits">
+					                        <img class='img-slider'src="img/produits/microphone.webp" width='500px'alt="L'image de notre produits">
+					                        <img class='img-slider'src="img/produits/lecteur.webp" width='500px'alt="L'image de notre produits"> #}
+
+
+					{# <p>slide #1 of 8</p> #}
+
+
+				</div>
+
+				<div class="num-container">
+					<button id='pre'>précédent</button>
+
+					<div class='numbers'>
+						<button class='mynumber active-number'>1</button>
+						<button class='mynumber'>2</button>
+						<button class='mynumber'>3</button>
+						<button class='mynumber'>4</button>
+						<button class='mynumber'>5</button>
+						<button class='mynumber'>6</button>
+						<button class='mynumber'>7</button>
+						<button class='mynumber'>8</button>
+					</div>
+
+
+					<button id='next'>suivant</button>
+				</div>
+			</div>
+
+
+			<div class='divQuote'>
+
+				<h3 class='text-center'>Chercher plus information des produits de
+					<span>
+						<a href="{{path('app_product')}}">larycom
+						</a>acctuellements</span>
+				</h3>
+
+				<div id="parentBlockquote">
+					<div class="blockquote-author-image">
+						<img src="{{asset('img/upload/drone.jpg')}}" width="300" alt="L'image"></div>
+					<div class='drone'>
+						<h1 class="cite-last-name">Drone</h1>
+						<p>Les critères et fictions virilistes se périment à mesure que la technologie se   substitue à l'humain. Force et puissance physiques : les muscles de ces messieurs, l'automation s'en branle, drones et exosquelettes partout se greffent et se déploient.
+						</p>
+					</div>
+				</div>
+				<button id='clickButton' class='btn btn-primary'>Voir Plus Produits</button>
+
+
+			</div>
+
+		</div>
+
+        <hr class="identifiant1">
+
+        <div class="identifiant">
+            <h5 class='text-center'>Voir les recommandations personnalisées</h5>
+            
+                <a href="{{path('app_services')}}" class="identifiantElement"><span>Identifiez-vous</span></a>
+            
+           <p>Nouveau client ? <a href="{{path('app_register')}}">Commencer ici.</a></p>
+        </div>
+	</section>
+{% endblock %}

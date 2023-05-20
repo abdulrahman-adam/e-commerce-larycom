@@ -1,0 +1,90 @@
+
+/* 
+.inscriptionParent {
+    background: #f0f2f5;
+
+} */
+
+
+.inscription {
+    width: 600px;
+    margin-top: 33px;
+    margin-bottom: 160px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 11px;
+    padding: 55px;
+}
+
+.inscription p{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#registration_form_gender {
+    width: 444px;
+    display: flex;
+    justify-content: space-around;
+    gap: 66px;
+}
+
+@media only screen and (max-width: 1360px) and (min-width:200px) {
+    .inscription {
+        padding: 5px 55px;
+        margin: 44px;
+        width: auto ! important;
+    }
+
+    #registration_form_gender{
+        flex-direction: column;
+    }
+
+    .inscription.form-control{
+    
+        width: auto;
+    }
+
+    @media only screen and (max-width: 426px) and (min-width:200px) {
+
+        .inscription {
+            padding: 5px 55px;
+            margin: 22px;
+            width: auto;
+     
+           }   
+    }
+}
+
+
+.connexion {
+    width: 555px;
+    margin-top: 33px;
+    margin-bottom: 136px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 11px;
+    padding: 55px;
+}
+
+.connexion p{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.connexion input, button{
+    margin-top: 11px;
+    
+}
+
+
+
+@media only screen and (max-width: 567px) and (min-width:200px) {
+    .connexion {
+        padding: 5px;
+        margin: 66px auto;
+        width: auto;
+    }
+
+    .connexion.form-control{
+    
+        width: auto;
+    }
+}

@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+<section class="section">
+    <div class="contactPage">
+        <div class="aproposParent">
+            <h1>A PROPOS</h1>
+            <p>
+                   Le site <a href="{{path('app_product')}}">Larycom</a> est un site qui travaille dans le domaine du commerece, spécialiser d'achater dans modern Appariel électronique,
+                  
+                    appariel informatique et appariel numérique depuis un ans.
+                    
+                <span>
+                    Si vous cherchez un produits dans ce domain? Contactez-Nous en discussions.
+                </span>
+            </p>
+
+            <div class="contactReseau">
+                <div class="emailElement"><p><i class="bi bi-envelope"></i> <span class='span1'>Email</span></p></div>
+                <div class="telephoneElement"><p><i class="bi bi-telephone"></i> <span class='span1'>Téléphone</span></p></div>
+                <div class="locationElement"><p><i class="bi bi-geo-alt"></i> <span class='span1'>Location</span></p></div>
+            </div>
+
+            <div class="disparu">
+
+
+                <div class="disparu1">
+                    <p class="emailDisparu">Email: naireick@gmail.com</p>
+                    <button class="btn btn-primary retournerContact1">ok</button>
+                </div>
+
+                <div class="disparu2">
+                
+                    <p class="telDisparu">Téléphone: 0033766397122</p>
+                    <button class="btn btn-primary retournerContact2">ok</button>
+                </div>
+                <div class="disparu3">
+                
+                    <p class="locationDisparu">Location: </p>
+                        <p> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.1980258404797!2d2.463126515668833!3d48.701695879272435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60aa2bd473021%3A0x1931c8f2656575dc!2s117%20Av.%20de%20la%20R%C3%A9publique%2C%2091230%20Montgeron!5e0!3m2!1sfr!2sfr!4v1659806770123!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                    <p>
+                        <button class="btn btn-primary retournerContact3">ok</button>
+                    </p>
+                </div>
+
+                
+            </div>
+
+
+        </div>   
+
+
+
+
+
+        <div class="contactParent">
+
+            <h1>CONTACT</h1>
+            <h2><a href="{{path('app_product')}}">Larycom votre e-commerce</a></h2>
+            <p>Grâce à ce formulaire. Envoyez-Nous directement un email de à propos de de votre remarques. Nouw vous répondons des que possible.</p>
+            <div class="contactForm">
+                {{form(contactForm)}}
+            </div>
+        </div> 
+    
+    </div>
+
+
+</section>  
+{% endblock %}

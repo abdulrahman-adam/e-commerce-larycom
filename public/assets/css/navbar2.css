@@ -1,0 +1,145 @@
+
+
+.navbar2{
+    height: 55px;
+    /* background-color: #173B3F; */
+    background-color: #46627f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 66px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.ulNavbar2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 55px;
+    margin-bottom: 0;
+}
+
+.ulNavbar2 li{
+   list-style: none;
+   position: relative;
+} 
+
+.ulNavbar2 li a, .ulNavbar2 li span{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+ } 
+
+
+
+ .ulNavbar2 li a:active, .ulNavbar2 li span:active{
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px;
+ } 
+
+/* .span{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+} */
+
+/* .navbarParentSpan{
+    display: none;
+} */
+
+/* @media only screen and (max-width: 300px) and (min-width: 200px) {
+    .navbar2{
+        padding: 0 11px;
+    }
+
+} */
+
+
+@media only screen and (max-width: 1124px) and (min-width: 200px) {
+    
+    /* .navbarParentSpan{
+        display: block;
+        cursor: pointer;
+    }
+
+    .ulNavbar2{
+      position: fixed;
+      top: 100px;
+      left: -100%;
+      width: 100%;
+      
+      background-color: #173B3F;
+      gap: 0;
+      transition:  0.5s;
+      flex-direction: column;
+      text-align: center;
+      padding: 22px 0 ;
+    }
+
+    .navbarParentSpan.active :nth-child(2){
+        opacity: 0;
+    }
+
+    .navbarParentSpan.active :nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbarParentSpan.active :nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .ulNavbar2.active{
+        left: 0;
+    } */
+
+}
+
+
+/* La feuille de tsyle de dropdown */
+
+.ulNavbar2 li ul{
+   display: none;
+   position: absolute;
+   background-color: #46627f;
+   z-index: 999;
+   border-radius: 7px;
+   padding-left: 0;
+   width: 140px;
+   text-align: center;
+   padding-bottom: 12px;
+
+} 
+
+.ulNavbar2 li:hover ul{
+    display: block;
+} 
+
+.ulNavbar2 li ul li {
+    margin-top: 11px;
+    border-radius: 7px;
+} 
+
+
+.ulNavbar2 li ul li a{
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin: 0;
+} 
+
+.ulNavbar2 li ul li a:hover{
+    background-color: #226269;
+} 
+
+
+ 

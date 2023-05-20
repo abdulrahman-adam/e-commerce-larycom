@@ -1,0 +1,205 @@
+
+
+/* La section des images */
+/* Le perent déviation de notre slider */
+.slider11{
+    width: 800px;
+    text-align: center;
+    /* box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%); */
+}
+
+
+.slider-container{
+    position: relative;
+    width: 650px;
+    height: 450px;
+    border-radius: 9px;
+    margin: 33px auto;
+}
+
+.slider-container p{
+    z-index: 55;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    top: 11px;
+    left: 22px;
+    background-color: #1183d5;
+    padding: 8px;
+    border-radius: 9px;
+}
+
+/* La feuille de style des elements images */
+.img-slider{
+    width: 645px;
+    height: 445px;
+    border-radius: 9px;
+    position: absolute;
+    left: 0;
+}
+
+
+
+
+.num-container{
+    width: 600px;
+    margin: 1px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* La feuille de style des buttons précédent et suivant */
+
+#pre, #next {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #2e95e3;
+    color: #fff;
+}
+
+#next:hover, #pre{
+    cursor: pointer;
+    background-color: #2b9cf3;
+}
+
+#next:active{
+    transform: translateX(4px);
+    cursor: pointer;
+}
+
+#pre:active{
+    transform: translateX(-4px);
+    cursor: pointer;
+}
+
+/* On cas du button précédant et le button suivant disabled apliquer ces codes */
+#pre:disabled, #next:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: translateX(0);
+}
+
+
+.num-container button{
+    all: unset;
+}
+
+.numbers button{
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #f3f3f3;
+    color:black;
+}
+
+@media ( max-width: 834px) {
+    .num-container{
+        width: auto;
+        height: auto;
+        position: static;
+    } 
+
+    #pre, #next {
+        font-size: 16px;
+        padding: 3px 5px;
+        border-radius: 2px;
+        background-color: #2e95e3;
+        color: #fff;
+    }
+
+    .numbers button{
+        opacity: 0;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+.numbers button:hover{
+    background-color: #2e95e3 ! important;
+    color: white ! important;
+    cursor: pointer;
+}
+
+.numbers button:active {
+    padding: 4px 9px;
+    cursor: pointer;
+}
+
+.active-number{
+    background-color: #2e95e3 ! important;
+    color: white ! important;
+}
+
+
+
+
+
+
+@media ( max-width: 822px) {
+    .slider11{
+    width: auto;
+    height: 444px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slider11 h3{
+   font-size: 13px;
+}
+
+.slider-container{
+    width: 300px;
+    height: 200px;
+    position: static;
+}
+
+.img-slider{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 70px;
+}
+
+    .num-container{
+        margin-left: 10px;
+    }
+
+
+
+    @media ( max-width: 444px) {
+        .slider-container{
+            width: 250px;
+            position: static;
+        }
+        
+        .img-slider{
+            width: 250px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .num-container{
+            width: auto;
+            height: 44px;
+            margin-left: 10px;
+        }
+    
+        
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,59 @@
+
+
+
+
+/* La feuille de style de la section footer */
+
+.footer{
+    height: 222px;
+    color: #fff;
+    background-color: rgb(4, 77, 137);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 66px;
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.larycomFooter a{
+    color: #fff;
+    font-size: 26px;
+}
+
+.ulFooter li{
+    list-style: none;
+}
+
+.ulFooter li a{
+    color: white;
+    font-size: 16px;
+}
+
+.reseau a{
+    
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 29px;
+    margin-left: 11px;
+}
+
+
+.question a{
+    color: #fff;
+}
+
+
+/* Ici la section de mediaqury */
+
+@media only screen and (max-width: 893px) and (min-width: 200px) {
+    .footer{
+        height: auto;
+       flex-direction: column;
+        gap: 2px;
+        align-items: center;
+        text-align: center;
+        padding: 11px 0;
+    }
+    
+}

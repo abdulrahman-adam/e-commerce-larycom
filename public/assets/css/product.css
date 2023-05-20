@@ -1,0 +1,143 @@
+/* La feuille de style  de la déviation background */
+.backgroundParent {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    border: 1px solid red;
+    text-align: center;
+    margin: 22px auto;
+}
+
+
+.backgroundParent img{
+    width: 1000px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* margin: 22px auto; */
+    /* text-align: center; */
+    /* object-fit: contain; */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 200px) {
+    .backgroundParent {
+        display: none;
+    }
+.backgroundParent img{
+    display: none;
+}
+}
+
+/* la classe active des les image de arrière-plan */
+
+.backgroundParent img.active {
+    opacity: 1;
+}
+
+
+
+/* La feuille de style de la déviation fitrageForm*/
+
+.form-row{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 77px;
+    background-color: #ddedf4;
+    padding: 10px;
+    border-radius: 19px;
+}
+
+.col button {
+    transform: translateY(3px);
+}
+
+@media only screen and (max-width: 1020px) and (min-width: 200px) {
+    .form-row{
+        flex-direction: column;
+        gap: 1px;
+        padding: 2px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}
+
+/* La feuilles de style de  toute la section a claas 'section'  dans le projet*/
+
+.section{
+    margin-top: 11px;
+}
+
+.section.active{
+    margin-top: 211px;
+}
+
+
+
+/* La feuilles de style de la déviation du produits */
+
+.productParent {
+    background-color: rgb(252, 252, 252);
+    /* background: #dedede; */
+    margin: 55px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.productParent.active{
+    margin-top: 255px;
+}
+/* La feuille de style de l'article du produits */
+.productElement{
+    width: 300px;
+    margin: 23px;
+    padding: 17px;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.productElement:hover{
+    background-color: rgb(239, 225, 225);
+    padding: 19px 2px;
+    cursor: pointer; 
+}
+
+/* La déviation d'image de produits */
+
+.productElement img {
+    width: 255px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* La feuille de style de l'article prix du produits */
+
+.priceColor{
+    color: green;
+}
+
+
+
+
+
+/* La feuille de style du form permets ajouter nouvelle produit */
+
+.formContact {
+    width: 555px;
+    margin: 33px auto; 
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    padding: 44px;
+}
+
+

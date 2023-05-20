@@ -1,0 +1,161 @@
+
+
+.navbar{
+    height: 55px;
+    background-color: #173B3F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 66px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logoLarycom {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+
+.logoLarycom:hover{
+    background-color: #226269;
+    padding: 10px;
+    border-radius: 7px;
+    color: white; 
+}
+
+.ulNavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 55px;
+    margin-bottom: 0;
+}
+
+.ulNavbar li{
+   list-style: none;
+   position: relative;
+} 
+
+.ulNavbar li a, .ulNavbar li span{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+ } 
+
+
+
+ .ulNavbar li a:hover, .ulNavbar li span:hover{
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff 
+ } 
+
+ .ulNavbar li a:active, .ulNavbar li span:active{
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px;
+ } 
+
+.span{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarParentSpan{
+    display: none;
+}
+
+@media only screen and (max-width: 300px) and (min-width: 200px) {
+    .navbar{
+        padding: 0 11px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1280px) and (min-width: 200px) {
+    
+    .navbarParentSpan{
+        display: block;
+        cursor: pointer;
+    }
+
+    .ulNavbar{
+      position: fixed;
+      top: 100px;
+      left: -100%;
+      width: 100%;
+      /* background-color: #226269; */
+      background-color: #173B3F;
+      gap: 0;
+      transition:  0.5s;
+      flex-direction: column;
+      text-align: center;
+      padding: 22px 0 ;
+    }
+
+    .navbarParentSpan.active :nth-child(2){
+        opacity: 0;
+    }
+
+    .navbarParentSpan.active :nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbarParentSpan.active :nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .ulNavbar.active{
+        left: 0;
+    }
+
+}
+
+
+/* La feuille de tsyle de dropdown */
+
+.ulNavbar li ul{
+    width: 213px;
+   display: none;
+   position: absolute;
+   background-color: #173B3F;
+   padding: 22px 11px;
+   border-radius: 7px;
+   text-align: center;
+} 
+
+.ulNavbar li:hover ul{
+    display: block;
+ } 
+
+.ulNavbar li ul li {
+    margin-top: 11px;
+    border-radius: 7px;
+} 
+
+
+.ulNavbar li ul li a{
+    padding: 8px;
+} 
+
+.ulNavbar li ul li a:hover{
+    background-color: #226269;
+
+} 
+ 

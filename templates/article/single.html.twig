@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<section class="section">
+		<div class="articleParent">
+			<div class="articleElement">
+                <img src="{{ asset('img/upload/' ~ article.picture) }}" alt="{{article.name}}">
+				<h3>{{article.name}}</h3>
+				<p>{{article.content}}</p>
+				<p class="priceColor2">
+					<b>Prix</b>:
+					{{article.price}}
+					<b>€</b>
+				</p>
+                <a href="{{path('app_article')}}">Retourner</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}

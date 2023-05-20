@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <section class="section">
+    
+        <h3 class="text-center">Bienvenue dans la boutique Accessoires de <a href="{{path('app_product')}}">Larycom</a></h3>
+        <div class="productParent">
+            {% for accessoire in accessoireList %}
+                <div class='productElement'>
+                    <img src="{{asset('img/upload/' ~ accessoire.picture)}}" alt="{{accessoire.name}}">
+                    <h3>{{accessoire.name}}</h3>
+                    <p><b>Catégorie: </b>{{accessoire.category}}</p>
+                    
+                    <p class='priceColor'><b>Prix: </b>{{accessoire.price}} <b>€</b></p>
+					<p><a href="{{path('app_commander')}}">Livraison GRATUITE dès 10.90 € d'achats expédiés par Larycom</a></p>
+                    <p><a href="{{path('single_accessoires' , {id: accessoire.id})}}" class="btn btn-primary">Voir plus</a></p>
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{path('update_accessoires' , {id: accessoire.id})}}">Modifier</a>
+                    <a href="{{path('delete_accessoires' , {id: accessoire.id})}}">Suprimmer</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

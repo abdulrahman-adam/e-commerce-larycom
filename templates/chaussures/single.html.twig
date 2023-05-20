@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<section class="section">
+		<div class="articleParent">
+			<div class="articleElement">
+                <img src="{{ asset('img/upload/' ~ chaussure.picture) }}" alt="{{chaussure.name}}">
+				<h3>{{chaussure.name}}</h3>
+				<p>{{chaussure.category}}</p>
+				<p class="priceColor2">
+					<b>Prix</b>:
+					{{chaussure.price}}
+					<b>€</b>
+				</p>
+                <a href="{{path('single_chaussures')}}" class="btn btn-primary">Retourner</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}

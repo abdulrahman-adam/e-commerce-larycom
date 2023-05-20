@@ -1,0 +1,104 @@
+
+
+.dropTitle{
+    margin-top: 55px;
+    margin-left: 22px;
+    /* background-color: #173B3F; */
+    width: 190px;
+    padding: 11px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.iconsDrop {
+    transition: 0.4s;
+
+}
+
+.iconsDrop.active {
+    transform: rotate(-180deg);
+    transition: 0.4s;
+}
+
+
+.allCategories {
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    margin-left: 22px;
+    background-color: rgb(217, 206, 206);
+    padding: 11px;
+    opacity: 0;
+    transition: 1s;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+
+@keyframes example {
+    0% {transition: 0s;}
+    100% {transition: 5s;}
+}
+
+.allCategories a{
+    text-decoration: none;
+    color: black;
+    margin-top: 11px;
+}
+
+
+.allCategories.active {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+.identifiant1 {
+    margin-top: 99px;
+}
+
+.identifiant {
+    text-align: center;
+    
+}
+
+.identifiant h5{
+    margin-bottom: 25px;
+}
+
+.identifiant p{
+    margin-top: 25px;
+}
+
+.identifiantElement {
+    text-decoration: none;
+}
+
+ .identifiantElement span{
+    cursor: pointer;
+    background-color: yellow; 
+    border-radius: 7px;   
+    padding: 8px 55px;
+    color: #000;
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ffe093;
+    box-shadow: 0.5px 1px 0.5px #f0ae07;
+}
+
+.identifiantElement span:hover{
+    background-color: rgb(245, 245, 107); 
+}
+
+.identifiantElement span:active{
+    padding: 11px 58px; 
+}

@@ -1,0 +1,361 @@
+
+/* La section du services form */
+
+    
+#formServices{
+    width: 500px;
+    height: 400px;
+    margin: 33px auto;
+    background-color: #f3eded; 
+    padding: 22px;
+    border-radius: 13px;
+    opacity: 0;
+    position: absolute;
+    top: 550px;
+    left: 10px;
+}
+
+
+
+.btnAnnuler{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+
+#annuler{
+    transform: translateY(-65px);
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    margin-left: 111px;
+}
+
+@media ( max-width: 900px) {
+    #formServices{
+        width: auto;
+        opacity: 1;
+        position: static;
+    }
+    #annuler{
+        transform: translateY(-65px);
+        margin-left: 22px; 
+    }
+   
+}
+
+#services_form_submit {
+    margin-top: 27px;
+}
+
+#services_form_description {
+    height: 111px;
+}
+
+
+.annoncerParent{
+    margin: 33px auto;
+    /* width: 888px; */
+    height: 860px;
+    text-align: center;
+    border-radius: 19px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3eded; 
+
+    /* border-right: 22px solid green; */
+    /* -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0);
+    background: #FFFFFF; */
+}
+
+@media ( max-width: 900px) {
+    .annoncerParent{
+        flex-direction: column;
+        height: auto;
+        font-size: 22px;
+        text-align: center;
+    }
+    .annoncerParent h1{
+        font-size: 16px;
+    }
+    #child{
+        width: 333px;
+    }
+}
+
+/* @media(min-width:280px) and (max-width: 970px) {
+
+    .annoncerParent{
+        flex-direction: column;
+        height: auto;
+        background-color: green;
+    }
+} */
+
+
+.div11{
+    width: auto;
+    text-align: center;
+}
+
+
+.div11 p{
+    /* width: 555px; */
+    /* border: 3px solid red; */
+    text-align: center;
+}
+
+
+#butPublicity{
+    width: 500px;
+    text-align: center;
+    margin: 12px auto;
+    padding: 22px;
+    opacity: 1;
+}
+
+
+#butPublicity p{
+    font-size: 22px;
+    margin-top: 22px;
+    padding: 22px;
+}
+
+
+@media ( max-width: 900px) {
+    #butPublicity{
+      width: auto;
+    }
+    #butPublicity p{
+        font-size: 16px;
+        margin-top: 22px;
+        padding: 22px;
+    }
+}
+
+.div22{
+    width: 444px;
+   margin-left: 11px;
+}
+
+
+
+#button22, #button33{
+    margin-bottom: 22px;
+}
+
+.div33{
+    width: 444px;
+     margin-left: 11px;
+    text-align: center;
+}
+
+.div22 p, .div33 p {
+    font-size: 22px;
+    margin-top: 5px;
+    border-radius: 9px;
+    padding: 5px;
+ }
+
+#more22{
+    display: none;
+}
+
+#more33{
+    display: none;
+}
+
+@media ( max-width: 900px) {
+        .div22, .div33{
+        width: auto;    
+    }
+   
+}
+
+
+/* La feuille style des enfants des services  */
+
+#child{
+    
+    background-color: yellow;
+    color: red;
+    padding: 5px;
+    margin: 11px auto;
+    border-radius: 9px;
+    width: 444px;
+}
+
+#child1{
+    width: 380px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(0, 96, 128);
+    color: white;
+    padding: 5px;
+    border-radius: 9px;
+    margin: 11px auto;
+
+}
+
+#child2{
+    width: 400px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(0, 41, 128);
+    color: white;
+    padding: 5px;
+    border-radius: 9px;
+    margin: 11px auto;
+}
+
+#child3{
+    width: 280px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(17, 190, 238);
+    color: white;
+    padding: 5px;
+    /* margin-left: 160px; */
+    border-radius: 9px;
+    margin: 11px auto;
+
+    /* animation: mymove 3s 3; */
+
+}
+
+#child4{
+    margin-bottom: 11px;
+    margin: 11px auto;
+}
+
+@media ( max-width: 900px) {
+   
+    .annoncerParent h1{
+        font-size: 16px;
+    }
+    #child{
+        width: 200px;
+        font-size: 15px;
+    }
+
+    #child1{
+        width: 200px;
+        font-size: 12px;
+    }
+
+    #child2{
+        width: 200px;
+        font-size: 12px;
+    }
+
+    #child3{
+        width: 200px;
+        font-size: 12px;
+    }
+
+    #child4{
+        width: 200px;
+        font-size: 12px;
+        text-align: center;
+        margin: 11px auto ;
+
+    }
+
+    .div11{
+        text-align: center;
+        height: auto;
+    }
+}
+
+
+
+
+/* La feuille de style pour la class active */
+
+
+
+/* @keyframes my{
+    0% {transform: translate(100vw, 0)}
+
+
+    100% {transform: translate(0, 0)}
+} */
+
+
+/* La section de Affiche plus et affiche  mois*/
+
+.servicParagrahpe{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 44px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+
+@media ( max-width: 900px) {
+    .servicParagrahpe{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+
+
+
+#container{
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    width: 800px;
+    padding: 33px;
+    margin-top: 44px;
+    margin-bottom: 44px;
+    text-align: center;
+}
+
+@media ( max-width: 900px) {
+    #container{
+       width: auto;
+       height: auto;
+        text-align: center;
+    }
+}
+
+.allQ{
+    margin: 0 auto;
+}
+
+.lireplus{
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    width: 888px;
+    text-align: center;
+    padding: 33px;
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+
+
+
+.lireplus p{
+    font-size: 22px;
+}
+
+
+@media ( max-width: 900px) {
+    .lireplus{
+        width: auto;
+        font-size: 12px;
+    }
+}
+
+/* La section de Affiche Plus et Affiche Mois*/
+
+#more1{
+    display: none;
+}
+
+
+
+

@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<section class="section">
+
+		<div class="productParent">
+
+			<div class="productElement">
+				<img src="{{ asset('img/upload/' ~ product.picture) }}" alt="{{product.name}}">
+				<h3>{{product.name}}</h3>
+				<p>
+					<b>Catégorei</b>:
+					{{product.type}}</p>
+				<p>
+					<b>Original</b>:
+					{{product.original}}</p>
+				<p class='priceColor'>
+					<b>Prix</b>:
+					{{product.price}}
+					<b>€</b>
+				</p>
+				<a href="{{path('app_product')}}" class='btn btn-primary'>Retourner</a>
+			</div>
+
+		</div>
+	</section>
+{% endblock %}
